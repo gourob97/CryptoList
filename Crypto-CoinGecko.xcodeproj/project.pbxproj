@@ -11,6 +11,14 @@
 		FD228B102BFE488A002C9075 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD228B0F2BFE488A002C9075 /* ContentView.swift */; };
 		FD228B122BFE488C002C9075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD228B112BFE488C002C9075 /* Assets.xcassets */; };
 		FD228B152BFE488C002C9075 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD228B142BFE488C002C9075 /* Preview Assets.xcassets */; };
+		FD228B1D2BFE48CA002C9075 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD228B1C2BFE48CA002C9075 /* CoinService.swift */; };
+		FD228B202BFE4B19002C9075 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD228B1F2BFE4B19002C9075 /* Coin.swift */; };
+		FD228B232BFE4C8F002C9075 /* CoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD228B222BFE4C8F002C9075 /* CoinsViewModel.swift */; };
+		FD228B282BFE64BE002C9075 /* CoinAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD228B272BFE64BE002C9075 /* CoinAPIError.swift */; };
+		FD3CC0612C0B97E100D999CE /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FD3CC0602C0B97E100D999CE /* SDWebImageSwiftUI */; };
+		FD3CC0642C0BAE2C00D999CE /* CoinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CC0632C0BAE2C00D999CE /* CoinDetailsView.swift */; };
+		FD3CC0662C0BB33E00D999CE /* CoinDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CC0652C0BB33E00D999CE /* CoinDetailsViewModel.swift */; };
+		FD3CC0682C0BB96900D999CE /* OnlineImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CC0672C0BB96900D999CE /* OnlineImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,13 @@
 		FD228B0F2BFE488A002C9075 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FD228B112BFE488C002C9075 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD228B142BFE488C002C9075 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD228B1C2BFE48CA002C9075 /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
+		FD228B1F2BFE4B19002C9075 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		FD228B222BFE4C8F002C9075 /* CoinsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewModel.swift; sourceTree = "<group>"; };
+		FD228B272BFE64BE002C9075 /* CoinAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAPIError.swift; sourceTree = "<group>"; };
+		FD3CC0632C0BAE2C00D999CE /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
+		FD3CC0652C0BB33E00D999CE /* CoinDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewModel.swift; sourceTree = "<group>"; };
+		FD3CC0672C0BB96900D999CE /* OnlineImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3CC0612C0B97E100D999CE /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +67,11 @@
 		FD228B0C2BFE488A002C9075 /* Crypto-CoinGecko */ = {
 			isa = PBXGroup;
 			children = (
+				FD3CC0622C0BAE1900D999CE /* View */,
+				FD228B212BFE4C7C002C9075 /* ViewModel */,
+				FD228B1E2BFE4B0E002C9075 /* Model */,
+				FD228B1B2BFE489B002C9075 /* Service */,
 				FD228B0D2BFE488A002C9075 /* Crypto_CoinGeckoApp.swift */,
-				FD228B0F2BFE488A002C9075 /* ContentView.swift */,
 				FD228B112BFE488C002C9075 /* Assets.xcassets */,
 				FD228B132BFE488C002C9075 /* Preview Content */,
 			);
@@ -65,6 +84,42 @@
 				FD228B142BFE488C002C9075 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FD228B1B2BFE489B002C9075 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FD228B1C2BFE48CA002C9075 /* CoinService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FD228B1E2BFE4B0E002C9075 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD228B1F2BFE4B19002C9075 /* Coin.swift */,
+				FD228B272BFE64BE002C9075 /* CoinAPIError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD228B212BFE4C7C002C9075 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD228B222BFE4C8F002C9075 /* CoinsViewModel.swift */,
+				FD3CC0652C0BB33E00D999CE /* CoinDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FD3CC0622C0BAE1900D999CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD228B0F2BFE488A002C9075 /* ContentView.swift */,
+				FD3CC0632C0BAE2C00D999CE /* CoinDetailsView.swift */,
+				FD3CC0672C0BB96900D999CE /* OnlineImage.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +138,9 @@
 			dependencies = (
 			);
 			name = "Crypto-CoinGecko";
+			packageProductDependencies = (
+				FD3CC0602C0B97E100D999CE /* SDWebImageSwiftUI */,
+			);
 			productName = "Crypto-CoinGecko";
 			productReference = FD228B0A2BFE488A002C9075 /* Crypto-CoinGecko.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +169,9 @@
 				Base,
 			);
 			mainGroup = FD228B012BFE488A002C9075;
+			packageReferences = (
+				FD3CC05F2C0B97E100D999CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = FD228B0B2BFE488A002C9075 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +198,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3CC0662C0BB33E00D999CE /* CoinDetailsViewModel.swift in Sources */,
+				FD3CC0642C0BAE2C00D999CE /* CoinDetailsView.swift in Sources */,
+				FD228B282BFE64BE002C9075 /* CoinAPIError.swift in Sources */,
 				FD228B102BFE488A002C9075 /* ContentView.swift in Sources */,
+				FD228B1D2BFE48CA002C9075 /* CoinService.swift in Sources */,
+				FD228B202BFE4B19002C9075 /* Coin.swift in Sources */,
+				FD228B232BFE4C8F002C9075 /* CoinsViewModel.swift in Sources */,
+				FD3CC0682C0BB96900D999CE /* OnlineImage.swift in Sources */,
 				FD228B0E2BFE488A002C9075 /* Crypto_CoinGeckoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +348,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +378,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD3CC05F2C0B97E100D999CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD3CC0602C0B97E100D999CE /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD3CC05F2C0B97E100D999CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD228B022BFE488A002C9075 /* Project object */;
 }
