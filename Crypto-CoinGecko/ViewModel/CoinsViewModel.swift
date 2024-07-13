@@ -10,14 +10,23 @@ import SwiftUI
 
 class CoinsViewModel: ObservableObject {
     @Published var coins: [Coin] = []
-    @Published var errorMessage: String?
+    @Published var showToast = false
+    @Published var errorMessage: String? {
+        didSet {
+            showToast = (errorMessage != nil)
+        }
+    }
     
-    let coinService = CoinService()
+    private let coinService: CoinServiceProtocol
+    
+    init(coinService: CoinServiceProtocol) {
+        self.coinService = coinService
+    } 
     
     @MainActor
     func getCoins() async {
         do {
-            coins = try await coinService.getCoins()
+            coins += try await coinService.getCoins()
         } catch {
             guard let apiError = error as? CoinAPIError else {
                 errorMessage = CoinAPIError.unknownError(error: error).customDescription

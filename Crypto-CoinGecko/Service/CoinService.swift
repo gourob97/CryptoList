@@ -6,45 +6,60 @@
 //
 
 import Foundation
-
-protocol HTTPDataDownloader {
-    func getData<T: Decodable>(as type: T.Type, endPoint: String) async throws -> T
+protocol CoinServiceProtocol {
+    func getCoins() async throws -> [Coin]
+    func getCoinDetails(id: String) async throws -> CoinDetails?
 }
 
-extension HTTPDataDownloader {
-    func getData<T: Decodable>(as type: T.Type, endPoint: String) async throws -> T {
-        guard let url = URL(string: endPoint) else {
-            throw CoinAPIError.requestFailed(description: "Bad URL")
-        }
-        let (data, response) = try await URLSession.shared.data(from: url)
-        
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw CoinAPIError.requestFailed(description: "Request Failed")
-        }
-        
-        guard (200...300).contains(httpResponse.statusCode) else {
-            throw CoinAPIError.invalidStatusCode(statusCode: httpResponse.statusCode)
-        }
-        
-        do {
-            return try JSONDecoder().decode(type, from: data)
-            
-        } catch {
-            throw CoinAPIError.jsonParsingFailure
-        }
-    }
-}
-
-class CoinService: HTTPDataDownloader {
-    let urlString = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
+class CoinService: CoinServiceProtocol, HTTPDataDownloader {
+    var page = 0
+    var pageLimit = 30
     
+    private var baseUrlComponents: URLComponents {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.coingecko.com"
+        components.path = "/api/v3/coins/"
+        return components
+    }
+    
+    private var allCoinsUrlString: String? {
+        var components = baseUrlComponents
+        components.path += "markets"
+        components.queryItems = [
+            .init(name: "vs_currency", value: "usd"),
+            .init(name: "per_page", value: "\(pageLimit)"),
+            .init(name: "page", value: "\(page)")
+        ]
+        return components.url?.absoluteString
+    }
+    
+    private func coinDetailsUrlString(id: String) -> String? {
+        var components = baseUrlComponents
+        components.path += id
+        components.queryItems = [
+            .init(name: "localization", value: "false")
+        ]
+        return components.url?.absoluteString
+    }
     
     func getCoins() async throws -> [Coin]  {
-        return try await getData(as: [Coin].self, endPoint: urlString)
+        page += 1
+        guard let allCoinsUrlString = allCoinsUrlString else {
+            throw CoinAPIError.requestFailed(description: "URL error")
+        }
+        return try await getData(as: [Coin].self, endPoint: allCoinsUrlString)
     }
     
     func getCoinDetails(id: String) async throws -> CoinDetails? {
-        let detailsUrlString = "https://api.coingecko.com/api/v3/coins/\(id)?localization=false"
-        return try await getData(as: CoinDetails.self, endPoint: detailsUrlString)
+        if let cache = CoinDetailsCache.shared.get(forKey: id) {
+            return cache
+        }
+        guard let coinDetailsUrlString = coinDetailsUrlString(id: id) else {
+            throw CoinAPIError.requestFailed(description: "URL error")
+        }
+        let details =  try await getData(as: CoinDetails.self, endPoint: coinDetailsUrlString)
+        CoinDetailsCache.shared.set(details, forKey: id)
+        return details
     }
 }

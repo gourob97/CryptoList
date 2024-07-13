@@ -13,9 +13,9 @@ struct CoinDetailsView: View {
     @ObservedObject var coinDetailsVM: CoinDetailsViewModel
     @State private var task: Task<(), Never>?
     
-    init(coin: Coin) {
+    init(coin: Coin, service: CoinServiceProtocol) {
         self.coin = coin
-        self.coinDetailsVM = CoinDetailsViewModel(coindId: coin.id)
+        self.coinDetailsVM = CoinDetailsViewModel(apiService: service, coindId: coin.id)
     }
     
     var body: some View {
@@ -45,5 +45,5 @@ struct CoinDetailsView: View {
 }
 
 #Preview {
-    CoinDetailsView(coin: .exampleCoin)
+    CoinDetailsView(coin: .exampleCoin, service: CoinService())
 }

@@ -8,14 +8,15 @@
 import Foundation
 
 class CoinDetailsViewModel: ObservableObject {
-    let apiService = CoinService()
+    private let apiService: CoinServiceProtocol
     
     let coindId: String
     
     @Published var coinDetails: CoinDetails?
     
     
-    init(coindId: String)  {
+    init(apiService: CoinServiceProtocol, coindId: String) {
+        self.apiService = apiService
         self.coindId = coindId
     }
     

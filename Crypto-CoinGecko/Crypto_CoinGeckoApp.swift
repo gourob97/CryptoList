@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Crypto_CoinGeckoApp: App {
+    let coinService = CoinService()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(coinService: coinService)
         }
     }
 }

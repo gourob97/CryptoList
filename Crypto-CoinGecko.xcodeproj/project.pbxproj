@@ -19,7 +19,23 @@
 		FD3CC0642C0BAE2C00D999CE /* CoinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CC0632C0BAE2C00D999CE /* CoinDetailsView.swift */; };
 		FD3CC0662C0BB33E00D999CE /* CoinDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CC0652C0BB33E00D999CE /* CoinDetailsViewModel.swift */; };
 		FD3CC0682C0BB96900D999CE /* OnlineImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CC0672C0BB96900D999CE /* OnlineImage.swift */; };
+		FD4998022C42C11300C0D7F0 /* Crypto_CoinGeckoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4998012C42C11300C0D7F0 /* Crypto_CoinGeckoTests.swift */; };
+		FD4998092C42C12500C0D7F0 /* CoinsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4998082C42C12500C0D7F0 /* CoinsViewModelTest.swift */; };
+		FD49980C2C42E23100C0D7F0 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = FD49980B2C42E23100C0D7F0 /* AlertToast */; };
+		FD60B7952C3882D900F44A40 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60B7942C3882D900F44A40 /* HTTPDataDownloader.swift */; };
+		FD60B7982C3893E500F44A40 /* CoinDetailsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60B7972C3893E500F44A40 /* CoinDetailsCache.swift */; };
+		FD60B79A2C38AC6400F44A40 /* MockCoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60B7992C38AC6400F44A40 /* MockCoinService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD4998032C42C11300C0D7F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD228B022BFE488A002C9075 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD228B092BFE488A002C9075;
+			remoteInfo = "Crypto-CoinGecko";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FD228B0A2BFE488A002C9075 /* Crypto-CoinGecko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto-CoinGecko.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +50,12 @@
 		FD3CC0632C0BAE2C00D999CE /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
 		FD3CC0652C0BB33E00D999CE /* CoinDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewModel.swift; sourceTree = "<group>"; };
 		FD3CC0672C0BB96900D999CE /* OnlineImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineImage.swift; sourceTree = "<group>"; };
+		FD4997FF2C42C11300C0D7F0 /* Crypto-CoinGeckoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crypto-CoinGeckoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4998012C42C11300C0D7F0 /* Crypto_CoinGeckoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto_CoinGeckoTests.swift; sourceTree = "<group>"; };
+		FD4998082C42C12500C0D7F0 /* CoinsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewModelTest.swift; sourceTree = "<group>"; };
+		FD60B7942C3882D900F44A40 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
+		FD60B7972C3893E500F44A40 /* CoinDetailsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsCache.swift; sourceTree = "<group>"; };
+		FD60B7992C38AC6400F44A40 /* MockCoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoinService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +64,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3CC0612C0B97E100D999CE /* SDWebImageSwiftUI in Frameworks */,
+				FD49980C2C42E23100C0D7F0 /* AlertToast in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD4997FC2C42C11300C0D7F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				FD228B0C2BFE488A002C9075 /* Crypto-CoinGecko */,
+				FD4998002C42C11300C0D7F0 /* Crypto-CoinGeckoTests */,
 				FD228B0B2BFE488A002C9075 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FD228B0A2BFE488A002C9075 /* Crypto-CoinGecko.app */,
+				FD4997FF2C42C11300C0D7F0 /* Crypto-CoinGeckoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +99,8 @@
 		FD228B0C2BFE488A002C9075 /* Crypto-CoinGecko */ = {
 			isa = PBXGroup;
 			children = (
+				FD60B7962C3893D200F44A40 /* Cache */,
+				FD60B7922C3882C300F44A40 /* Shared */,
 				FD3CC0622C0BAE1900D999CE /* View */,
 				FD228B212BFE4C7C002C9075 /* ViewModel */,
 				FD228B1E2BFE4B0E002C9075 /* Model */,
@@ -90,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				FD228B1C2BFE48CA002C9075 /* CoinService.swift */,
+				FD60B7992C38AC6400F44A40 /* MockCoinService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -122,6 +157,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FD4998002C42C11300C0D7F0 /* Crypto-CoinGeckoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD4998012C42C11300C0D7F0 /* Crypto_CoinGeckoTests.swift */,
+				FD4998082C42C12500C0D7F0 /* CoinsViewModelTest.swift */,
+			);
+			path = "Crypto-CoinGeckoTests";
+			sourceTree = "<group>";
+		};
+		FD60B7922C3882C300F44A40 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FD60B7932C3882C900F44A40 /* API */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FD60B7932C3882C900F44A40 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FD60B7942C3882D900F44A40 /* HTTPDataDownloader.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FD60B7962C3893D200F44A40 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				FD60B7972C3893E500F44A40 /* CoinDetailsCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,10 +208,29 @@
 			name = "Crypto-CoinGecko";
 			packageProductDependencies = (
 				FD3CC0602C0B97E100D999CE /* SDWebImageSwiftUI */,
+				FD49980B2C42E23100C0D7F0 /* AlertToast */,
 			);
 			productName = "Crypto-CoinGecko";
 			productReference = FD228B0A2BFE488A002C9075 /* Crypto-CoinGecko.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FD4997FE2C42C11300C0D7F0 /* Crypto-CoinGeckoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD4998052C42C11300C0D7F0 /* Build configuration list for PBXNativeTarget "Crypto-CoinGeckoTests" */;
+			buildPhases = (
+				FD4997FB2C42C11300C0D7F0 /* Sources */,
+				FD4997FC2C42C11300C0D7F0 /* Frameworks */,
+				FD4997FD2C42C11300C0D7F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD4998042C42C11300C0D7F0 /* PBXTargetDependency */,
+			);
+			name = "Crypto-CoinGeckoTests";
+			productName = "Crypto-CoinGeckoTests";
+			productReference = FD4997FF2C42C11300C0D7F0 /* Crypto-CoinGeckoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -152,11 +239,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					FD228B092BFE488A002C9075 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					FD4997FE2C42C11300C0D7F0 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FD228B092BFE488A002C9075;
 					};
 				};
 			};
@@ -171,12 +262,14 @@
 			mainGroup = FD228B012BFE488A002C9075;
 			packageReferences = (
 				FD3CC05F2C0B97E100D999CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				FD49980A2C42E23100C0D7F0 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = FD228B0B2BFE488A002C9075 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FD228B092BFE488A002C9075 /* Crypto-CoinGecko */,
+				FD4997FE2C42C11300C0D7F0 /* Crypto-CoinGeckoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +284,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD4997FD2C42C11300C0D7F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -198,10 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD60B79A2C38AC6400F44A40 /* MockCoinService.swift in Sources */,
 				FD3CC0662C0BB33E00D999CE /* CoinDetailsViewModel.swift in Sources */,
+				FD60B7982C3893E500F44A40 /* CoinDetailsCache.swift in Sources */,
 				FD3CC0642C0BAE2C00D999CE /* CoinDetailsView.swift in Sources */,
 				FD228B282BFE64BE002C9075 /* CoinAPIError.swift in Sources */,
 				FD228B102BFE488A002C9075 /* ContentView.swift in Sources */,
+				FD60B7952C3882D900F44A40 /* HTTPDataDownloader.swift in Sources */,
 				FD228B1D2BFE48CA002C9075 /* CoinService.swift in Sources */,
 				FD228B202BFE4B19002C9075 /* Coin.swift in Sources */,
 				FD228B232BFE4C8F002C9075 /* CoinsViewModel.swift in Sources */,
@@ -210,7 +313,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD4997FB2C42C11300C0D7F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4998022C42C11300C0D7F0 /* Crypto_CoinGeckoTests.swift in Sources */,
+				FD4998092C42C12500C0D7F0 /* CoinsViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD4998042C42C11300C0D7F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD228B092BFE488A002C9075 /* Crypto-CoinGecko */;
+			targetProxy = FD4998032C42C11300C0D7F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FD228B162BFE488C002C9075 /* Debug */ = {
@@ -392,6 +512,44 @@
 			};
 			name = Release;
 		};
+		FD4998062C42C11300C0D7F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R94C6PV2M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gourob.Crypto-CoinGeckoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crypto-CoinGecko.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Crypto-CoinGecko";
+			};
+			name = Debug;
+		};
+		FD4998072C42C11300C0D7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R94C6PV2M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gourob.Crypto-CoinGeckoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crypto-CoinGecko.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Crypto-CoinGecko";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +571,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		FD4998052C42C11300C0D7F0 /* Build configuration list for PBXNativeTarget "Crypto-CoinGeckoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4998062C42C11300C0D7F0 /* Debug */,
+				FD4998072C42C11300C0D7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -424,6 +591,14 @@
 				minimumVersion = 3.0.4;
 			};
 		};
+		FD49980A2C42E23100C0D7F0 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -431,6 +606,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD3CC05F2C0B97E100D999CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		FD49980B2C42E23100C0D7F0 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD49980A2C42E23100C0D7F0 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
